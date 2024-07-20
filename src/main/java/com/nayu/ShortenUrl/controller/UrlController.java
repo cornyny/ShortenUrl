@@ -13,17 +13,12 @@ import org.springframework.web.servlet.view.RedirectView;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import java.util.HashMap;
-import java.util.Map;
 
 @Controller
 public class UrlController {
 
     private final UrlService urlService;
     private static final String DOMAIN = "http://localhost:8080/";
-    private final Map<String, String> shortToLongMap = new HashMap<>();
-    private final Map<String, String> longToShortMap = new HashMap<>();
-    private long idCounter = 1;
 
     @Autowired
     public UrlController(UrlService urlService) {

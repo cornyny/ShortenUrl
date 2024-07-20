@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Transactional
 public class UrlService {
 
-    private UrlRepository urlRepository;
+    private final UrlRepository urlRepository;
 
     @Autowired
     public UrlService(UrlRepository urlRepository) {
