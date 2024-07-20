@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>URL Shortener</title>
+</head>
+<body>
+<div class="container">
+    <h1>Make Shorten URL</h1>
+    <form action="/makeUrl" method="post">
+        <div class="form-group">
+            <label for="url">URL: </label>
+            <input type="text" id="url" name="url" placeholder="URL을 입력 하세요." required>
+            <button type="submit">변환</button>
+        </div>
+    </form>
+    <div th:if="${shortUrl}">
+        <h2>Shortened URL:</h2>
+        <a th:href="${shortUrl}" th:text="${shortUrl}"></a>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>
